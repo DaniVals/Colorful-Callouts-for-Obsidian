@@ -1,0 +1,26 @@
+/*
+
+The selector ".callout[data-callout="info"]" 
+selects every callout who has the info, also know as the type of callout, also known as what you write >[!here] equal to that one
+
+this selector allows you to change only certain types of callouts, even having some using the same icon but different color-scheme like shown in the README
+
+*/
+
+/* ============ BASIC COLOR AND BACKGROUND CHANGE ============ */
+
+/* callout title text and svg */
+.callout[data-callout="info"] .callout-title, /* this selects the title of the callout */
+.callout[data-callout="info"] .callout-title svg /* this selects the icon of the callout */
+{
+    color: #999; /* this is the color of the text and the icon of the TITLE */
+}
+
+/* callout main content */
+.callout[data-callout="info"] /* this selects the callout */
+{
+    background-color: #9992; /* this is the background of the callout, if you like it transparent like the rest i'd recommend 22 alpha */
+    color: #999; /* this is the text and content of the callout */
+
+    border: 3px solid #999; /* you can also add a border to the callout here, not selecting a color will use the default text color of your theme */
+}
